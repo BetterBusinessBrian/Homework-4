@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Coding Quiz</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a href="highscores.html" class="link">View Highscores</a>
+        <div style="float: right;">
+            <h2 id="seconds">Timer</h2>
+        </div>
+        <br>
+        <h1 id= "title" class="display-3">Coding Quiz</h1>
+        <p id= "question" class="lead">
+            Answer each question correctly as quickly as you can, but be careful, wrong answers hurt your score! Press start to begin:
+          </p>
+          <div id= "answers"></div>
+          <button id="startButton" type="button" class="btn btn-primary btn-lg btn-block">Start</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
