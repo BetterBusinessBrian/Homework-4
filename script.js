@@ -1,3 +1,4 @@
+//Variables used
 var timeEl = document.getElementById("seconds")
 var startButton = document.getElementById("startButton")
 var question = document.getElementById("question")
@@ -10,11 +11,11 @@ var scoreSaver = document.getElementById("save-score")
 var initials = document.getElementById("initials")
 var timerInterval
 var finished = false
-
+//hiding form until test completion
 form.style.visibility = 'hidden';
-
+// beginning time 
 var secondsLeft = 75;
-
+//array of 5 questions, respective answers, and correct answer
 var questionArray = [
   {
     question: "Common used data types DO NOT include: ",
@@ -43,7 +44,7 @@ var questionArray = [
   }
 ]
 
-
+// function starts clock and stops it if game is complete
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;
@@ -60,7 +61,7 @@ function setTime() {
   }, 1000);
 }
 
-
+// function creates buttons containing text from Question Array
 function createButtons(questionArray) {
   for (i = 0; i < questionArray.answers.length; i++) {
     var button = document.createElement("button");
@@ -71,6 +72,7 @@ function createButtons(questionArray) {
   }
 }
 
+// Removes start button and begins test
 function setUpTest() {
   startButton.remove()
   question.textContent = questionArray[0].question;
@@ -80,6 +82,7 @@ console.log(questionArray[i]);
   }
 }
 
+// Ends game and makes form visible 
 function finishGame() {
   question.textContent = "Nicely done!";
   finished = true;
@@ -87,7 +90,7 @@ function finishGame() {
   scoreDisplay.value = "Your score: " + localStorage.getItem("score");
   form.style.visibility = 'visible';
 }
-
+// Progresses to the next question
 function nextQuestion() {
   console.log(questionNumber);
   questionNumber++;
@@ -100,12 +103,13 @@ function nextQuestion() {
   }
 }
 
-
+//start button sets up timer and first questions
 startButton.addEventListener("click", function () {
   setTime();
   setUpTest()
 });
 
+// clicking answer results in next questions and score change if applicable 
 answers.addEventListener("click", function (event) {
   if (event.target.value != questionArray[questionNumber - 1].correctAnswer) {
     secondsLeft = secondsLeft - 10;
