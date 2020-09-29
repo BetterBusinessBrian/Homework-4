@@ -16,15 +16,25 @@
             <h2 id="seconds">Timer</h2>
         </div>
         <br>
-        <h1 id= "title" class="display-3">Coding Quiz</h1>
-        <p id= "question" class="lead">
-            Answer each question correctly as quickly as you can, but be careful, wrong answers hurt your score! Press start to begin:
-          </p>
-          <div id= "answers"></div>
-          <button id="startButton" type="button" class="btn btn-primary btn-lg btn-block">Start</button>
+        <h1 id="title" class="display-3">Coding Quiz</h1>
+        <p id="question" class="lead">
+            Answer each question correctly as quickly as you can, but be careful, wrong answers hurt your score! Press
+            start to begin:
+        </p>
+        <div id="answers"></div>
+        <br>
+        <button id="startButton" type="button" class="btn btn-primary btn-lg btn-block">Start</button>
+        <form class="form-inline" id="scoreplaceholder">
+            <div class="form-group mb-2">
+                <input id= "score-display" type="text" readonly class="form-control-plaintext"  value="Your Score">
+                <input type="password" class="form-control" id="inputPassword2" placeholder="Enter Initials">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Save Score</button>
+        </form>
     </div>
 
     <script src="./script.js"></script>
+
 </body>
 
 </html>
